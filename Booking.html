@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anvi Restaurant | Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <div class="logo">Anvi Restaurant</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <ul class="nav-links">
+      <li><a href="Week4.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="Booking.html" class="active">Booking</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="section page-heading">
+    <div class="container">
+      <h1>Book a Table</h1>
+      <p>Fill in the form below to reserve your table. We will confirm your booking by email or phone.</p>
+    </div>
+  </section>
+
+  <section class="section booking-section">
+    <div class="container booking-grid">
+      <form id="bookingForm" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your name">
+          <small class="error-message" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+          <small class="error-message" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone*</label>
+          <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number">
+          <small class="error-message" id="phoneError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date*</label>
+          <input type="date" id="date" name="date" required>
+          <small class="error-message" id="dateError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="time">Time*</label>
+          <input type="time" id="time" name="time" required>
+          <small class="error-message" id="timeError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests*</label>
+          <input type="number" id="guests" name="guests" required min="1" max="20" value="2">
+          <small class="error-message" id="guestsError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Special Requests</label>
+          <textarea id="message" name="message" rows="4" placeholder="Allergies, occasions, seating preference..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Booking</button>
+        <p class="form-success" id="formSuccess"></p>
+      </form>
+
+      <div class="booking-info">
+        <h2>Contact & Location</h2>
+        <p>Call us for urgent reservations or large groups.</p>
+        <p><strong>Phone:</strong> +91-9113054011</p>
+        <p><strong>Email:</strong> hello@anvi.com</p>
+        <p><strong>Address:</strong> 123 Food Street, Pune, Maharashtra</p>
+
+        <h3>Opening Hours</h3>
+        <p>Mon–Fri: 11am – 11pm</p>
+        <p>Sat–Sun: 9am – 12am</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="footer-bottom">© 2026 Anvi Restaurant</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
